@@ -220,9 +220,7 @@ export const Contacts: React.FC = () => {
               />
               <label htmlFor="privacyConsent" className="text-sm text-gray-700 leading-relaxed">
                 Я согласен на{' '}
-                <Link
-                  href="/privacy-policy"
-                  className="text-blue-600 hover:text-blue-800 underline">
+                <Link href="/personal-data" className="text-blue-600 hover:text-blue-800 underline">
                   обработку персональных данных
                 </Link>{' '}
                 в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных»

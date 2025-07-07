@@ -340,7 +340,7 @@ ${!isHimPage ? `📊 *Количество листов:* ${data.quantity}` : ''
                   <label htmlFor="privacyConsent" className="text-sm text-gray-700 leading-relaxed">
                     Я согласен на{' '}
                     <Link
-                      href="/privacy-policy"
+                      href="/personal-data"
                       className="text-blue-600 hover:text-blue-800 underline">
                       обработку персональных данных
                     </Link>{' '}
