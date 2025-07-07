@@ -222,8 +222,6 @@ export const Contacts: React.FC = () => {
                 Я согласен на{' '}
                 <Link
                   href="/privacy-policy"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 underline">
                   обработку персональных данных
                 </Link>{' '}

@@ -327,7 +327,7 @@ ${!isHimPage ? `📊 *Количество листов:* ${data.quantity}` : ''
                     <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
                   )}
                 </div>
-                
+
                 <div className="flex items-start gap-3 pt-4">
                   <input
                     type="checkbox"
@@ -341,18 +341,17 @@ ${!isHimPage ? `📊 *Количество листов:* ${data.quantity}` : ''
                     Я согласен на{' '}
                     <Link
                       href="/privacy-policy"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="text-blue-600 hover:text-blue-800 underline">
                       обработку персональных данных
                     </Link>{' '}
-                    в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных»
+                    в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных
+                    данных»
                   </label>
                 </div>
                 {errors.privacyConsent && (
                   <p className="text-red-500 text-sm mt-1">{errors.privacyConsent.message}</p>
                 )}
-                
+
                 <div className="flex gap-3 pt-4">
                   <Button type="submit" className="flex-1" disabled={isSubmitting}>
                     {isSubmitting ? 'Отправка...' : 'Заказать'}
