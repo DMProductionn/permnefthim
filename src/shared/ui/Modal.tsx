@@ -353,7 +353,11 @@ ${!isHimPage ? `📊 *Количество листов:* ${data.quantity}` : ''
                 )}
 
                 <div className="flex gap-3 pt-4">
-                  <Button type="submit" className="flex-1" disabled={isSubmitting}>
+                  <Button
+                    type="submit"
+                    className="flex-1"
+                    disabled={isSubmitting}
+                    color={isHimPage ? 'blue' : 'red'}>
                     {isSubmitting ? 'Отправка...' : 'Заказать'}
                   </Button>
                   <button

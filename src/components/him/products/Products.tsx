@@ -32,7 +32,10 @@ export const Products: React.FC = () => {
                 </span>
               ))}
             </p>
-            <Button className='mt-[20px]' onClick={() => handleOrderClick(product.title)} color="blue">
+            <Button
+              className="mt-[20px]"
+              onClick={() => handleOrderClick(product.title)}
+              color="blue">
               Заказать
             </Button>
           </div>
