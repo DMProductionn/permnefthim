@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/shared/ui/Button';
 import { useState } from 'react';
@@ -42,7 +42,7 @@ export const CrovlyaMain: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}>
-        <Image src="/Crovlya.png" alt="img" width={550} height={600} />
+        <img src="/Crovlya.png" alt="img" width={550} height={600} />
       </motion.div>
 
       <SimpleModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

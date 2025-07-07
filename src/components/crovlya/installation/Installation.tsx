@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export const Installation: React.FC = () => {
@@ -14,7 +13,7 @@ export const Installation: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, type: 'tween' }}
             viewport={{ once: true }}>
-            <Image
+            <img
               width={590}
               height={390}
               src="/схема-1.png"
@@ -29,7 +28,7 @@ export const Installation: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, type: 'tween' }}
             viewport={{ once: true }}>
-            <Image
+            <img
               width={565}
               height={575}
               src="/схема-2.png"

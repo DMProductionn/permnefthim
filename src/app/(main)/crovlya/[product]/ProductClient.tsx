@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Button } from '@/shared/ui/Button';
 import { Modal } from '../../../../shared/ui/Modal';
 import { useState } from 'react';
@@ -38,7 +38,7 @@ export function ProductClient() {
           {/* Изображение товара */}
           <div className="flex justify-center lg:justify-start">
             <div className="w-full max-w-[400px] lg:w-[400px]">
-              <Image
+              <img
                 width={400}
                 height={400}
                 src={product.image_main}

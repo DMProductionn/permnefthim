@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ABOUT_DATA } from './about.data';
 import { Button } from '@/shared/ui/Button';
@@ -64,7 +64,7 @@ export const AboutProducts: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}>
-          <Image
+          <img
             className="hidden xl:block"
             width={545}
             height={250}

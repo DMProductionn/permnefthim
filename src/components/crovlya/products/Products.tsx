@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { DATA } from './data';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
@@ -29,7 +28,7 @@ export const Products: React.FC = () => {
             className="rounded-[20px] border border-[#B5B5B5] p-[20px] max-w-[385px] w-full min-h-[650px] flex flex-col justify-between"
             key={product.title}>
             <div>
-              <Image
+              <img
                 className="mb-[50px]"
                 width={345}
                 height={185}
