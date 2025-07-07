@@ -3,22 +3,19 @@
 import Image from 'next/image';
 import { DATA } from './data';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Modal } from '@/shared/ui/Modal';
 
 export const Products: React.FC = () => {
-  const router = useRouter();
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState('');
+  const router = useRouter();
 
-  const handleProductClick = (productTitle: string) => {
-    const productSlug = productTitle.toLowerCase().replace(/\s+/g, '-');
+  const handleProductClick = (productSlug: string) => {
     router.push(`/crovlya/${productSlug}`);
   };
 
   const handleOrderClick = (productTitle: string) => {
     setSelectedProduct(productTitle);
-    setIsModalOpen(true);
   };
 
   return (
@@ -49,7 +46,7 @@ export const Products: React.FC = () => {
                 Заказать
               </button>
               <button
-                onClick={() => handleProductClick(product.title)}
+                onClick={() => handleProductClick(product.slug)}
                 className="w-1/2 h-[50px] rounded-[10px] transition-colors duration-300 border border-red text-red hover:text-white hover:bg-[#9F2E26] font-semibold bg-transparent">
                 Подробнее
               </button>
@@ -57,11 +54,10 @@ export const Products: React.FC = () => {
           </div>
         ))}
       </div>
-
       <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
         productTitle={selectedProduct}
+        isOpen={!!selectedProduct}
+        onClose={() => setSelectedProduct('')}
       />
     </section>
   );
