@@ -42,7 +42,7 @@ export const AboutProducts: React.FC = () => {
             Промышленная химия <br /> для вашего производства
           </p>
           <motion.p
-            className="text-[18px] sm:text-[30px] text-blue leading-[44px] flex flex-row gap-2 leading-[130%]"
+            className="text-[18px] sm:text-[30px] text-blue flex flex-row gap-2 leading-[130%]"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
