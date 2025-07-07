@@ -42,7 +42,7 @@ export const CrovlyaMain: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}>
-        <img src="/Crovlya.png" alt="img" width={550} height={600} />
+        <img src="/Crovlya_9_11zon.webp" alt="img" width={550} height={600} />
       </motion.div>
 
       <SimpleModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

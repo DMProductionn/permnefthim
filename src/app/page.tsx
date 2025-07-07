@@ -12,7 +12,7 @@ export default function Home() {
       <main className="flex min-h-screen">
         <div
           className="w-1/2 h-screen bg-cover bg-center flex flex-col justify-center pl-[45px]"
-          style={{ backgroundImage: "url('/crovlya_main.png')" }}>
+          style={{ backgroundImage: "url('/crovlya_main_10_11zon.webp')" }}>
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -34,7 +34,7 @@ export default function Home() {
         </div>
         <div
           className="w-1/2 h-screen bg-cover bg-center flex flex-col justify-center pl-[45px]"
-          style={{ backgroundImage: "url('/him_main.png')" }}>
+          style={{ backgroundImage: "url('/him_main_1_11zon.webp')" }}>
           <motion.h1
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}

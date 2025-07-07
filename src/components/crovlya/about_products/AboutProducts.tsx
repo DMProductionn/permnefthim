@@ -68,7 +68,7 @@ export const AboutProducts: React.FC = () => {
             className="hidden xl:block"
             width={545}
             height={250}
-            src="/crovlya_product.png"
+            src="/crovlya_product_11_11zon.webp"
             alt="img"
           />
         </motion.div>

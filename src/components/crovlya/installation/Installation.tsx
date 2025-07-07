@@ -16,7 +16,7 @@ export const Installation: React.FC = () => {
             <img
               width={590}
               height={390}
-              src="/схема-1.png"
+              src="/схема-1_6.webp"
               alt="scheme"
               className="w-full h-auto"
             />
@@ -31,7 +31,7 @@ export const Installation: React.FC = () => {
             <img
               width={565}
               height={575}
-              src="/схема-2.png"
+              src="/схема-2_7.webp"
               alt="scheme"
               className="w-full h-auto"
             />

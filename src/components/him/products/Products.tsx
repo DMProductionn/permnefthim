@@ -2,7 +2,6 @@
 
 import { DATA } from './data';
 import { useState } from 'react';
-// import Image from 'next/image';
 import { Button } from '@/shared/ui/Button';
 import { Modal } from '@/shared/ui/Modal';
 
@@ -22,7 +21,7 @@ export const Products: React.FC = () => {
         {DATA.map((product) => (
           <div
             key={product.title}
-            className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
+            className="bg-white rounded-[20px] border border-[#B5B5B5] p-6 flex flex-col items-center justify-between">
             <img width={345} height={185} src={product.image} alt="product" />
             <p className="text-[20px] font-[700] mb-[10px] leading-[30px]">{product.title}</p>
             <p className="text-[14px]">
@@ -33,11 +32,9 @@ export const Products: React.FC = () => {
                 </span>
               ))}
             </p>
-            <div className="flex gap-4 mt-4">
-              <Button onClick={() => handleOrderClick(product.title)} color="blue">
-                Заказать
-              </Button>
-            </div>
+            <Button className='mt-[20px]' onClick={() => handleOrderClick(product.title)} color="blue">
+              Заказать
+            </Button>
           </div>
         ))}
       </div>

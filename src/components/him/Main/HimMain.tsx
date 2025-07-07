@@ -1,6 +1,5 @@
 'use client';
 
-// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/shared/ui/Button';
 import { useState } from 'react';
@@ -41,7 +40,7 @@ export const HimMain: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}>
-        <img src="/Him.png" alt="img" width={550} height={600} />
+        <img src="/Him_8_11zon.webp" alt="img" width={550} height={600} />
       </motion.div>
 
       <SimpleModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} buttonColor="blue" />

@@ -15,7 +15,7 @@ export const defaultSEO: SEOData = {
     'ООО ПЕРМНЕФТЕХИМ - поставщик качественных кровельных материалов и химических реагентов в Перми. Широкий ассортимент, доставка, консультации специалистов.',
   keywords:
     'кровельные материалы, химические реагенты, Пермь, ПЕРМНЕФТЕХИМ, кровля, химия, строительные материалы',
-  ogImage: '/Crovlya.png',
+  ogImage: '/Crovlya_9_11zon.webp',
   ogUrl: 'https://permneftekhim.ru',
 };
 
@@ -28,7 +28,7 @@ export const crovlyaSEO: SEOData = {
   ogTitle: 'Кровельные материалы в Перми - ПЕРМНЕФТЕХИМ',
   ogDescription:
     'Качественные кровельные материалы в Перми. Широкий выбор цветов, профессиональная консультация.',
-  ogImage: '/crovlya_main.png',
+  ogImage: '/crovlya_main_10_11zon.webp',
   ogUrl: 'https://permneftekhim.ru/crovlya',
   canonical: 'https://permneftekhim.ru/crovlya',
 };
@@ -42,7 +42,7 @@ export const himSEO: SEOData = {
   ogTitle: 'Химические реагенты в Перми - ПЕРМНЕФТЕХИМ',
   ogDescription:
     'Химические реагенты и реактивы в Перми. Качественные химические вещества для промышленности.',
-  ogImage: '/him_main.png',
+  ogImage: '/him_main_1_11zon.webp',
   ogUrl: 'https://permneftekhim.ru/him',
   canonical: 'https://permneftekhim.ru/him',
 };
@@ -67,7 +67,7 @@ export const getProductSEO = (productName: string, category: 'crovlya' | 'him'):
     ogDescription: `Купить ${productName.toLowerCase()} в Перми. Качественные ${
       category === 'crovlya' ? 'кровельные материалы' : 'химические реагенты'
     }.`,
-    ogImage: category === 'crovlya' ? '/crovlya_product.png' : '/him_main.png',
+    ogImage: category === 'crovlya' ? '/crovlya_product_11_11zon.webp' : '/him_main_1_11zon.webp',
     ogUrl: `${baseUrl}${categoryPath}/${encodeURIComponent(productName)}`,
     canonical: `${baseUrl}${categoryPath}/${encodeURIComponent(productName)}`,
   };
