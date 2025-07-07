@@ -213,7 +213,7 @@ export const Contacts: React.FC = () => {
               <input
                 type="checkbox"
                 id="privacyConsent"
-                className="mt-1 w-9 h-9 sm:w-4 sm:h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                className="mt-1 w-12 h-12 sm:w-4 sm:h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
                 {...register('privacyConsent', {
                   required: 'Необходимо согласие на обработку персональных данных',
                 })}
