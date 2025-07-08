@@ -15,6 +15,17 @@ export const Footer: React.FC = () => {
     }
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
+    let sectionPath = '/crovlya';
+    if (pathname.startsWith('/him')) sectionPath = '/him';
+    if (pathname !== sectionPath) {
+      e.preventDefault();
+      window.location.href = `${sectionPath}#${id}`;
+      return;
+    }
+    handleSmoothScroll(e, id);
+  };
+
   const specialPages = ['/personal-data', '/privacy-policy', '/user-agreement'];
   const isSpecial = specialPages.includes(pathname);
 
@@ -30,7 +41,9 @@ export const Footer: React.FC = () => {
     <footer className=" text-white px-[40px] pt-[30px] pb-[40px] bg-[#232323] flex justify-between">
       <div className="flex flex-col sm:flex-row gap-[40px] w-full items-center">
         <div className="flex flex-col items-center sm:items-start">
-          <Logo size="118" />
+          <Link href='/'>
+            <Logo size="118" />
+          </Link>
           <p>
             © {new Date().getFullYear()} ПЕРМНЕФТЕХИМ <br />{' '}
             <span className="text-[14px]">Все права защищены</span>
@@ -43,7 +56,7 @@ export const Footer: React.FC = () => {
               <li className="text-[14px] mb-[5px]">
                 <a
                   href="#main"
-                  onClick={(e) => handleSmoothScroll(e, 'main')}
+                  onClick={(e) => handleNavClick(e, 'main')}
                   className="hover:text-gray-300 transition-colors cursor-pointer">
                   Главная
                 </a>
@@ -51,7 +64,7 @@ export const Footer: React.FC = () => {
               <li className="text-[14px] mb-[5px]">
                 <a
                   href="#about"
-                  onClick={(e) => handleSmoothScroll(e, 'about')}
+                  onClick={(e) => handleNavClick(e, 'about')}
                   className="hover:text-gray-300 transition-colors cursor-pointer">
                   О продукции
                 </a>
@@ -59,7 +72,7 @@ export const Footer: React.FC = () => {
               <li className="text-[14px] mb-[5px]">
                 <a
                   href="#catalog"
-                  onClick={(e) => handleSmoothScroll(e, 'catalog')}
+                  onClick={(e) => handleNavClick(e, 'catalog')}
                   className="hover:text-gray-300 transition-colors cursor-pointer">
                   Каталог
                 </a>
@@ -68,7 +81,7 @@ export const Footer: React.FC = () => {
                 <li className="text-[14px] mb-[5px]">
                   <a
                     href="#usage"
-                    onClick={(e) => handleSmoothScroll(e, 'usage')}
+                    onClick={(e) => handleNavClick(e, 'usage')}
                     className="hover:text-gray-300 transition-colors cursor-pointer">
                     Где применяют композитпласт
                   </a>
@@ -78,7 +91,7 @@ export const Footer: React.FC = () => {
                 <li className="text-[14px] mb-[5px]">
                   <a
                     href="#scheme"
-                    onClick={(e) => handleSmoothScroll(e, 'scheme')}
+                    onClick={(e) => handleNavClick(e, 'scheme')}
                     className="hover:text-gray-300 transition-colors cursor-pointer">
                     Схема монтажа
                   </a>
@@ -87,7 +100,7 @@ export const Footer: React.FC = () => {
               <li className="text-[14px]">
                 <a
                   href="#contacts"
-                  onClick={(e) => handleSmoothScroll(e, 'contacts')}
+                  onClick={(e) => handleNavClick(e, 'contacts')}
                   className="hover:text-gray-300 transition-colors cursor-pointer">
                   Контакты
                 </a>

@@ -18,6 +18,19 @@ const Header: React.FC = () => {
     }
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
+    // Определяем, к какому разделу относится якорь
+    let sectionPath = '/crovlya';
+    if (pathname.startsWith('/him')) sectionPath = '/him';
+    if (pathname !== sectionPath) {
+      e.preventDefault();
+      window.location.href = `${sectionPath}#${id}`;
+      setOpen(false);
+      return;
+    }
+    handleSmoothScroll(e, id);
+  };
+
   const specialPages = ['/personal-data', '/privacy-policy', '/user-agreement'];
   const isSpecial = specialPages.includes(pathname);
 
@@ -88,7 +101,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="#main"
-              onClick={(e) => handleSmoothScroll(e, 'main')}
+              onClick={(e) => handleNavClick(e, 'main')}
               className="relative hover:text-gray-200 transition-colors cursor-pointer group">
               Главная
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
@@ -97,7 +110,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="#about"
-              onClick={(e) => handleSmoothScroll(e, 'about')}
+              onClick={(e) => handleNavClick(e, 'about')}
               className="relative hover:text-gray-200 transition-colors cursor-pointer group">
               О продукции
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
@@ -106,7 +119,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="#catalog"
-              onClick={(e) => handleSmoothScroll(e, 'catalog')}
+              onClick={(e) => handleNavClick(e, 'catalog')}
               className="relative hover:text-gray-200 transition-colors cursor-pointer group">
               Каталог
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
@@ -116,7 +129,7 @@ const Header: React.FC = () => {
             <li>
               <a
                 href="#usage"
-                onClick={(e) => handleSmoothScroll(e, 'usage')}
+                onClick={(e) => handleNavClick(e, 'usage')}
                 className="relative hover:text-gray-200 transition-colors cursor-pointer group">
                 Применение
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
@@ -127,7 +140,7 @@ const Header: React.FC = () => {
             <li>
               <a
                 href="#scheme"
-                onClick={(e) => handleSmoothScroll(e, 'scheme')}
+                onClick={(e) => handleNavClick(e, 'scheme')}
                 className="relative hover:text-gray-200 transition-colors cursor-pointer group">
                 Схема монтажа
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
@@ -137,7 +150,7 @@ const Header: React.FC = () => {
           <li>
             <a
               href="#contacts"
-              onClick={(e) => handleSmoothScroll(e, 'contacts')}
+              onClick={(e) => handleNavClick(e, 'contacts')}
               className="relative hover:text-gray-200 transition-colors cursor-pointer group">
               Контакты
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
