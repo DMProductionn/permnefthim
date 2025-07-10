@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
     <footer className=" text-white px-[40px] pt-[30px] pb-[40px] bg-[#232323] flex justify-between">
       <div className="flex flex-col sm:flex-row gap-[40px] w-full items-center">
         <div className="flex flex-col items-center sm:items-start">
-          <Link href='/'>
+          <Link href="/">
             <Logo size="118" />
           </Link>
           <p>
@@ -134,6 +134,13 @@ export const Footer: React.FC = () => {
                   href="/personal-data"
                   className="hover:text-gray-300 transition-colors cursor-pointer">
                   Согласие на обработку персональных данных
+                </Link>
+              </li>
+              <li className="text-[14px] mb-[5px]">
+                <Link
+                  href="/processing_policy"
+                  className="hover:text-gray-300 transition-colors cursor-pointer">
+                  Политика обработки персональных данных
                 </Link>
               </li>
               <li className="text-[14px] mb-[5px]">
