@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/personal-data', '/privacy-policy', '/user-agreement'],
+      disallow: ['/personal-data', '/privacy-policy', '/user-agreement', '/processing_policy'],
     },
-    sitemap: 'https://permneftekhim.ru/sitemap.xml',
+    sitemap: 'https://pnhperm.ru/sitemap.xml',
   };
 }
