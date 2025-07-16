@@ -88,6 +88,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        <link rel="icon" href="https://pnhperm.ru/favicon.ico" type="image/x-icon" />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1PCMF4B3S7"
